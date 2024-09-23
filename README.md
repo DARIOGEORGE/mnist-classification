@@ -1,47 +1,33 @@
-# Convolutional Deep Neural Network for Digit Classification
+ # Convolutional Deep Neural Network for Digit Classification
 
 ## AIM
 
 To Develop a convolutional deep neural network for digit classification and to verify the response for scanned handwritten images.
 
 ## Problem Statement and Dataset
+Problem Statement: Handwritten Digit Recognition with Convolutional Neural Networks
+
+Objective: Develop a Convolutional Neural Network (CNN) model to accurately classify handwritten digits (0-9) from the MNIST dataset.
+
+Data: The MNIST dataset, a widely used benchmark for image classification, contains grayscale images of handwritten digits (28x28 pixels). Each image is labeled with the corresponding digit (0-9).
 
 ## Neural Network Model
-<img src=image-5.png height=300 width=400>
+![nueral network image](https://github.com/user-attachments/assets/87d136e3-925b-4fda-93bb-2c7937bcc1af)
+
+
 
 ## DESIGN STEPS
 
-### STEP 1:
-Import tensorflow and preprocessing libraries.
-
-### STEP 2:
-load the dataset
-### STEP 3:
-Scale the dataset between it's min and max values
-### STEP 4:
-Using one hot encode, encode the categorical values
-
-### STEP 5:
-Split the data into train and test
-
-### STEP 6:
-Build the convolutional neural network model
-
-### STEP 7:
-Train the model with the training data
-
-### STEP 8:
-Plot the performance plot
-
-### STEP 9:
-Evaluate the model with the testing data
-
-### STEP 10:
-Fit the model and predict the single input
+### STEP 1: Import libraries
+### STEP 2: Load and preprocess data
+### STEP 3: Define model architecture
+### STEP 4: Compile the model
+### STEP 5: Train the model
+### STEP 6: Evaluate the model
 
 ## PROGRAM
 
-### Name: DARIO G
+### Name: Dario G
 ### Register Number: 212222230027
 ```py
 import numpy as np
@@ -67,7 +53,7 @@ single_image= X_train[0]
 single_image.shape
 
 plt.imshow(single_image,cmap='gray')
-print("Dario")
+print("Dario G")
 
 y_train.shape
 
@@ -93,7 +79,7 @@ y_train_onehot.shape
 
 single_image = X_train[500]
 plt.imshow(single_image,cmap='gray')
-print("Dario ")
+print("Dario G ")
 
 X_train_scaled = X_train_scaled.reshape(-1,28,28,1)
 X_test_scaled = X_test_scaled.reshape(-1,28,28,1)
@@ -133,9 +119,9 @@ metrics[['loss','val_loss']].plot()
 x_test_predictions = np.argmax(model.predict(X_test_scaled), axis=1)
 
 print(confusion_matrix(y_test,x_test_predictions))
-print('\nsabari akash')
+print('\nDario G')
 
-print('Dario\n')
+print('Dario G\n')
 print(classification_report(y_test,x_test_predictions))
 
 img = image.load_img('imagefive.jpeg')
@@ -152,7 +138,7 @@ x_single_prediction = np.argmax(
     model.predict(img_28_gray_scaled.reshape(1,28,28,1)),
      axis=1)
 
-print('Dario\n')
+print('Dario G\n')
 print(x_single_prediction)
 
 
@@ -166,29 +152,31 @@ x_single_prediction = np.argmax(
     model.predict(img_28_gray_inverted_scaled.reshape(1,28,28,1)),
      axis=1)
 
-print("Dario\n")
+print("Dario G\n")
 print(x_single_prediction)
 ```
 
 ## OUTPUT
 
 ### Training Loss, Validation Loss Vs Iteration Plot
-<img src=image.png height=30 width=100>
+![Screenshot 2024-09-23 103441](https://github.com/user-attachments/assets/d4b1e427-e3f9-487c-a35a-7c55d62d93b4)
+![Screenshot 2024-09-23 103538](https://github.com/user-attachments/assets/7efeeda8-e61b-4c95-ad78-5773e768e4a6)
 
-<img src=acc.png height=250 width=300><img src=loss.png height=250 width=300>
+
 
 ### Classification Report
-<img src=image-3.png height=250 width=300>
+![Screenshot 2024-09-23 103636](https://github.com/user-attachments/assets/a453f5dd-ccba-4351-a89d-c1fcf154a6eb)
 
 ### Confusion Matrix
-<img src=image-2.png height=250 width=300>
+![Screenshot 2024-09-23 103646](https://github.com/user-attachments/assets/0f371b36-e7e6-44bc-89c0-fdfbf7206a20)
+
 
 ### New Sample Data Prediction
-## Input
-<img src=imagefive.jpeg height=200 width=200>
+![Screenshot 2024-09-23 103716](https://github.com/user-attachments/assets/5d8354b5-e7c1-4ba7-bc21-00bb954072d9)
 
-## Output
-<img src=image-1.png height=50 width=100>
+![Screenshot 2024-09-23 103749](https://github.com/user-attachments/assets/1ca5a85a-fc5a-477f-988b-1b264506e543)
+
+
 
 ## RESULT
 Thus, a convolutional deep neural network for digit classification and to verify the response for scanned handwritten images is written and executed successfully.
