@@ -160,6 +160,8 @@ print(x_single_prediction)
 
 ### Training Loss, Validation Loss Vs Iteration Plot
 ![Screenshot 2024-09-23 103441](https://github.com/user-attachments/assets/d4b1e427-e3f9-487c-a35a-7c55d62d93b4)
+
+
 ![Screenshot 2024-09-23 103538](https://github.com/user-attachments/assets/7efeeda8-e61b-4c95-ad78-5773e768e4a6)
 
 
